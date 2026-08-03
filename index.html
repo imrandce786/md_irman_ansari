@@ -3,33 +3,35 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Md Irman Ansari — Production &amp; Quality Manager</title>
-<meta name="description" content="Md Irman Ansari — Production &amp; Quality Manager based in Hyderabad, India. 10+ years in electronics manufacturing, Lean Six Sigma, and ISO-compliant production operations.">
-<meta property="og:title" content="Md Irman Ansari — Production &amp; Quality Manager">
+<title>Md Irman Ansari — Production & Quality Manager</title>
+<meta name="description" content="Md Irman Ansari — Production & Quality Manager based in Hyderabad, India. 10+ years in electronics manufacturing, Lean Six Sigma, and ISO-compliant production operations.">
+<meta property="og:title" content="Md Irman Ansari — Production & Quality Manager">
 <meta property="og:description" content="10+ years in electronics manufacturing, Lean Six Sigma, and ISO-compliant production operations.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   :root{
-    --bg-deep:#0A1E16;
-    --bg-panel:#102A1E;
-    --line:#1E4632;
-    --line-soft:#173423;
-    --copper:#CC8A3E;
-    --copper-bright:#E3A75C;
-    --green:#46DA82;
-    --green-dim:rgba(70,218,130,.14);
-    --amber:#FFB43D;
-    --amber-dim:rgba(255,180,61,.14);
-    --ink:#EAF3EA;
-    --ink-muted:#9FBBA9;
-    --ink-faint:#6E8B7B;
+    --bg-deep:#0A192F;
+    --bg-panel:#112240;
+    --line:#233554;
+    --line-soft:#1A2E4A;
+    --primary:#4A90E2;
+    --primary-bright:#6BB6FF;
+    --accent:#00D4FF;
+    --accent-dim:rgba(0, 212, 255, .14);
+    --gold:#FFD700;
+    --gold-dim:rgba(255, 215, 0, .14);
+    --ink:#F8F9FA;
+    --ink-muted:#A8B8D4;
+    --ink-faint:#6C7A96;
     --font-display:'Space Grotesk', 'Poppins', sans-serif;
     --font-body:'IBM Plex Sans', -apple-system, sans-serif;
     --font-mono:'IBM Plex Mono', 'SFMono-Regular', monospace;
     --maxw:920px;
     --rail:44px;
+    --shadow:0 4px 20px rgba(0,0,0,0.3);
+    --shadow-lg:0 8px 30px rgba(0,0,0,0.4);
   }
 
   *{box-sizing:border-box;}
@@ -43,8 +45,8 @@
     font-family:var(--font-body);
     font-size:16px;
     line-height:1.65;
-    background-image:radial-gradient(rgba(234,243,234,.05) 1px, transparent 1px);
-    background-size:26px 26px;
+    background-image:radial-gradient(rgba(255,255,255,.08) 1px, transparent 1px);
+    background-size:30px 30px;
   }
 
   h1,h2,h3{font-family:var(--font-display); margin:0; color:var(--ink); font-weight:600;}
@@ -53,21 +55,22 @@
   ul,ol{margin:0; padding:0; list-style:none;}
 
   .skip-link{
-    position:absolute; left:-9999px; top:0; background:var(--copper); color:var(--bg-deep);
+    position:absolute; left:-9999px; top:0; background:var(--primary); color:var(--bg-deep);
     padding:10px 16px; z-index:200; font-family:var(--font-mono); font-weight:600;
   }
   .skip-link:focus{left:12px; top:12px;}
 
-  :focus-visible{outline:2px solid var(--green); outline-offset:3px;}
+  :focus-visible{outline:2px solid var(--accent); outline-offset:3px;}
 
-  /* ---------- Mini sticky bar ---------- */
+  /* Mini sticky bar */
   .mini-bar{
     position:fixed; top:0; left:0; right:0; height:60px; z-index:100;
-    background:rgba(10,30,22,.92); backdrop-filter:blur(6px);
+    background:rgba(10, 25, 47, .95); backdrop-filter:blur(10px);
     border-bottom:1px solid var(--line);
     display:flex; align-items:center; justify-content:center;
     transform:translateY(-100%); opacity:0;
     transition:transform .4s ease, opacity .4s ease;
+    box-shadow:var(--shadow);
   }
   .mini-bar.is-visible{transform:translateY(0); opacity:1;}
   .mini-bar-inner{
@@ -76,73 +79,80 @@
   }
   .mini-name{font-family:var(--font-mono); font-size:.85rem; letter-spacing:.03em; display:flex; align-items:center; gap:10px;}
   .mini-links{display:flex; gap:18px;}
-  .mini-links a{display:flex; align-items:center; gap:6px; font-family:var(--font-mono); font-size:.8rem; color:var(--ink-muted); text-decoration:none;}
-  .mini-links a:hover{color:var(--green);}
+  .mini-links a{display:flex; align-items:center; gap:6px; font-family:var(--font-mono); font-size:.8rem; color:var(--ink-muted); text-decoration:none; transition:color .2s ease;}
+  .mini-links a:hover{color:var(--accent);}
   .mini-links svg{width:15px; height:15px;}
   .mini-links span.txt{display:none;}
   @media (min-width:560px){ .mini-links span.txt{display:inline;} }
 
-  /* ---------- Status dot ---------- */
+  /* Status dot */
   .dot{
-    width:9px; height:9px; border-radius:50%; background:var(--green); display:inline-block; flex:none;
-    box-shadow:0 0 0 0 rgba(70,218,130,.6);
+    width:9px; height:9px; border-radius:50%; background:var(--accent); display:inline-block; flex:none;
+    box-shadow:0 0 0 0 rgba(0, 212, 255, .6);
     animation:pulse 2.2s infinite;
   }
   @keyframes pulse{
-    0%{box-shadow:0 0 0 0 rgba(70,218,130,.55);}
-    70%{box-shadow:0 0 0 8px rgba(70,218,130,0);}
-    100%{box-shadow:0 0 0 0 rgba(70,218,130,0);}
+    0%{box-shadow:0 0 0 0 rgba(0, 212, 255, .55);}
+    70%{box-shadow:0 0 0 8px rgba(0, 212, 255, 0);}
+    100%{box-shadow:0 0 0 0 rgba(0, 212, 255, 0);}
   }
   @media (prefers-reduced-motion: reduce){ .dot{animation:none;} }
 
-  /* ---------- Hero ---------- */
+  /* Hero */
   .hero{position:relative; overflow:hidden; padding:96px 24px 72px; border-bottom:1px solid var(--line);}
-  .hero-traces{position:absolute; inset:0; width:100%; height:100%; opacity:.5; pointer-events:none;}
-  .trace-line{fill:none; stroke:var(--copper); stroke-width:1.2; opacity:.55;}
-  .trace-line.alt{stroke:var(--green); opacity:.35;}
-  .via-dot{fill:var(--copper); opacity:.7;}
+  .hero-traces{position:absolute; inset:0; width:100%; height:100%; opacity:.6; pointer-events:none;}
+  .trace-line{fill:none; stroke:var(--primary); stroke-width:1.2; opacity:.6;}
+  .trace-line.alt{stroke:var(--accent); opacity:.4;}
+  .via-dot{fill:var(--gold); opacity:.8;}
 
   .hero-inner{position:relative; max-width:var(--maxw); margin:0 auto;}
   .eyebrow{
     font-family:var(--font-mono); font-size:.78rem; letter-spacing:.16em; text-transform:uppercase;
-    color:var(--copper-bright); margin-bottom:18px; display:flex; align-items:center; gap:10px;
+    color:var(--gold); margin-bottom:18px; display:flex; align-items:center; gap:10px;
   }
-  .eyebrow::before{content:""; width:22px; height:1px; background:var(--copper-bright); display:inline-block;}
+  .eyebrow::before{content:""; width:22px; height:1px; background:var(--gold); display:inline-block;}
 
   .hero h1{
     font-size:clamp(2.6rem, 7vw, 4.6rem);
     line-height:1.02; letter-spacing:-.01em; margin-bottom:20px;
+    background:linear-gradient(135deg, var(--ink) 0%, var(--accent) 100%);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    background-clip:text;
   }
   .hero-tagline{
     max-width:52ch; color:var(--ink-muted); font-size:clamp(1rem, 1.4vw, 1.15rem); margin-bottom:26px;
+    font-weight:500;
   }
 
   .status-pill{
     display:inline-flex; align-items:center; gap:10px; font-family:var(--font-mono); font-size:.85rem;
-    background:var(--green-dim); border:1px solid rgba(70,218,130,.35); color:var(--green);
+    background:var(--accent-dim); border:1px solid rgba(0, 212, 255, .4); color:var(--accent);
     padding:8px 16px; border-radius:999px; margin-bottom:30px;
+    box-shadow:0 0 15px rgba(0, 212, 255, 0.2);
   }
 
   .hero-meta{display:flex; flex-wrap:wrap; gap:20px 28px; margin-bottom:34px;}
   .hero-meta li{display:flex; align-items:center; gap:9px; font-family:var(--font-mono); font-size:.9rem; color:var(--ink-muted);}
-  .hero-meta a{text-decoration:none; display:flex; align-items:center; gap:9px; color:var(--ink-muted);}
-  .hero-meta a:hover{color:var(--copper-bright);}
-  .hero-meta svg{width:17px; height:17px; color:var(--copper-bright); flex:none;}
+  .hero-meta a{text-decoration:none; display:flex; align-items:center; gap:9px; color:var(--ink-muted); transition:color .2s ease;}
+  .hero-meta a:hover{color:var(--accent);}
+  .hero-meta svg{width:17px; height:17px; color:var(--gold); flex:none;}
 
   .hero-ctas{display:flex; flex-wrap:wrap; gap:14px;}
   .btn{
     font-family:var(--font-mono); font-size:.88rem; font-weight:600; letter-spacing:.02em;
     padding:13px 22px; border-radius:6px; text-decoration:none; display:inline-flex; align-items:center; gap:9px;
-    transition:transform .15s ease, background .15s ease, border-color .15s ease;
+    transition:all .3s ease;
+    box-shadow:0 4px 15px rgba(0,0,0,0.2);
   }
-  .btn:hover{transform:translateY(-1px);}
-  .btn-primary{background:var(--copper); color:var(--bg-deep);}
-  .btn-primary:hover{background:var(--copper-bright);}
+  .btn:hover{transform:translateY(-2px); box-shadow:0 6px 20px rgba(0,0,0,0.3);}
+  .btn-primary{background:linear-gradient(135deg, var(--primary) 0%, var(--primary-bright) 100%); color:var(--ink); border:1px solid var(--primary);}
+  .btn-primary:hover{background:linear-gradient(135deg, var(--primary-bright) 0%, var(--accent) 100%);}
   .btn-ghost{background:transparent; color:var(--ink); border:1px solid var(--line);}
-  .btn-ghost:hover{border-color:var(--copper-bright); color:var(--copper-bright);}
+  .btn-ghost:hover{border-color:var(--accent); color:var(--accent); background:rgba(0, 212, 255, 0.05);}
   .btn svg{width:16px; height:16px;}
 
-  /* ---------- Board / rail ---------- */
+  /* Board / rail */
   .board{
     max-width:var(--maxw); margin:0 auto; padding:0 24px;
   }
@@ -151,100 +161,117 @@
     padding:56px 0 56px var(--rail);
     border-left:2px solid var(--line);
     margin-left:6px;
+    transition:all .3s ease;
   }
+  .block:hover{border-left-color:var(--primary);}
   .block:last-of-type{border-left:2px solid var(--line);}
   .block::before{
     content:""; position:absolute; left:-7px; top:60px; width:12px; height:12px;
-    background:var(--bg-deep); border:2px solid var(--copper); border-radius:2px;
+    background:var(--bg-deep); border:2px solid var(--gold); border-radius:2px;
+    box-shadow:0 0 10px var(--gold);
   }
   .tag{
-    font-family:var(--font-mono); font-size:.78rem; letter-spacing:.12em; color:var(--copper-bright);
+    font-family:var(--font-mono); font-size:.78rem; letter-spacing:.12em; color:var(--gold);
     margin-bottom:10px; text-transform:uppercase;
   }
-  .block h2{font-size:clamp(1.4rem, 2.6vw, 1.9rem); margin-bottom:22px;}
-  .prose{color:var(--ink-muted); max-width:66ch; font-size:1.02rem;}
+  .block h2{font-size:clamp(1.4rem, 2.6vw, 1.9rem); margin-bottom:22px; color:var(--accent);}
+  .prose{color:var(--ink-muted); max-width:66ch; font-size:1.02rem; line-height:1.7;}
 
-  /* ---------- Gauges ---------- */
+  /* Gauges */
   .gauges{display:grid; grid-template-columns:repeat(2, 1fr); gap:28px; margin-top:8px;}
   @media (min-width:720px){ .gauges{grid-template-columns:repeat(4, 1fr);} }
   .gauge{
-    background:var(--bg-panel); border:1px solid var(--line); border-radius:8px; padding:18px 14px 20px;
+    background:var(--bg-panel); border:1px solid var(--line); border-radius:12px; padding:20px 16px 24px;
     text-align:center;
+    transition:all .3s ease;
+    box-shadow:0 4px 15px rgba(0,0,0,0.2);
   }
+  .gauge:hover{transform:translateY(-4px); box-shadow:0 8px 25px rgba(0,0,0,0.3); border-color:var(--primary);}
   .gauge-svg{width:100%; height:auto; display:block; overflow:visible;}
   .gauge-track{fill:none; stroke:var(--line-soft); stroke-width:11; stroke-linecap:round;}
-  .gauge-fill{fill:none; stroke:var(--green); stroke-width:11; stroke-linecap:round; transition:stroke-dashoffset 1.1s cubic-bezier(.2,.8,.2,1);}
-  .gauge-needle{stroke:var(--ink); stroke-width:2.5; stroke-linecap:round; transform-box:view-box; transform-origin:100px 116px; transition:transform 1.1s cubic-bezier(.2,.8,.2,1);}
-  .gauge-hub{fill:var(--ink);}
-  .gauge-value{font-family:var(--font-mono); font-size:1.7rem; font-weight:600; color:var(--ink); margin-top:2px;}
-  .gauge-label{font-size:.82rem; color:var(--ink-muted); margin-top:4px; line-height:1.4;}
+  .gauge-fill{fill:none; stroke:var(--accent); stroke-width:11; stroke-linecap:round; transition:stroke-dashoffset 1.1s cubic-bezier(.2,.8,.2,1);}
+  .gauge-needle{stroke:var(--gold); stroke-width:2.5; stroke-linecap:round; transform-box:view-box; transform-origin:100px 116px; transition:transform 1.1s cubic-bezier(.2,.8,.2,1);}
+  .gauge-hub{fill:var(--gold);}
+  .gauge-value{font-family:var(--font-mono); font-size:1.8rem; font-weight:700; color:var(--accent); margin-top:6px;}
+  .gauge-label{font-size:.85rem; color:var(--ink-muted); margin-top:8px; line-height:1.4; font-weight:500;}
 
-  /* ---------- Skills ---------- */
+  /* Skills */
   .skills-grid{display:grid; grid-template-columns:1fr; gap:26px;}
   @media (min-width:640px){ .skills-grid{grid-template-columns:1fr 1fr;} }
   .skill-group h3{
     font-family:var(--font-mono); font-size:.85rem; text-transform:uppercase; letter-spacing:.06em;
-    color:var(--ink); margin-bottom:12px; padding-bottom:8px; border-bottom:1px solid var(--line);
+    color:var(--gold); margin-bottom:12px; padding-bottom:8px; border-bottom:1px solid var(--line);
   }
   .chips{display:flex; flex-wrap:wrap; gap:8px;}
   .chips li{
     font-size:.85rem; color:var(--ink-muted); background:var(--bg-panel); border:1px solid var(--line);
     padding:6px 12px; border-radius:999px;
+    transition:all .2s ease;
   }
+  .chips li:hover{background:var(--primary); color:var(--ink); border-color:var(--primary); transform:translateY(-1px);}
 
-  /* ---------- Career timeline ---------- */
+  /* Career timeline */
   .timeline{display:flex; flex-direction:column; gap:36px;}
   .job{position:relative; padding-left:26px;}
   .job::before{
     content:""; position:absolute; left:0; top:6px; width:9px; height:9px; border-radius:50%;
-    background:var(--green); box-shadow:0 0 0 3px var(--green-dim);
+    background:var(--accent); box-shadow:0 0 0 3px var(--accent-dim);
   }
   .job::after{
     content:""; position:absolute; left:4px; top:18px; bottom:-36px; width:1px; background:var(--line-soft);
   }
   .job:last-child::after{display:none;}
-  .job-dates{font-family:var(--font-mono); font-size:.78rem; color:var(--copper-bright); letter-spacing:.04em;}
-  .job h3{font-size:1.15rem; margin:4px 0 2px;}
-  .job-company{font-size:.92rem; color:var(--ink-muted); margin-bottom:12px;}
+  .job-dates{font-family:var(--font-mono); font-size:.78rem; color:var(--gold); letter-spacing:.04em;}
+  .job h3{font-size:1.15rem; margin:4px 0 2px; color:var(--ink);}
+  .job-company{font-size:.92rem; color:var(--ink-muted); margin-bottom:12px; font-weight:500;}
   .job ul{display:flex; flex-direction:column; gap:8px;}
-  .job li{position:relative; padding-left:16px; color:var(--ink-muted); font-size:.96rem;}
+  .job li{position:relative; padding-left:16px; color:var(--ink-muted); font-size:.96rem; line-height:1.6;}
   .job li::before{content:"—"; position:absolute; left:0; color:var(--ink-faint);}
 
   .role-split{display:flex; flex-direction:column; gap:26px; margin-top:6px;}
   .role-split .role{padding-left:18px; border-left:2px solid var(--line-soft);}
   .role-split .job-dates{display:block; margin-bottom:2px;}
-  .role-split h4{font-family:var(--font-display); font-size:1.02rem; font-weight:600; color:var(--ink); margin:0 0 10px;}
+  .role-split h4{font-family:var(--font-display); font-size:1.02rem; font-weight:600; color:var(--accent); margin:0 0 10px;}
 
-  /* ---------- Credentials ---------- */
+  /* Credentials */
   .stamps{display:grid; grid-template-columns:1fr; gap:16px; margin-bottom:36px;}
   @media (min-width:640px){ .stamps{grid-template-columns:repeat(3, 1fr);} }
   .stamp{
-    border:1.5px dashed var(--amber); border-radius:8px; padding:18px 16px; background:var(--amber-dim);
+    border:1.5px dashed var(--gold); border-radius:12px; padding:20px 18px; background:var(--gold-dim);
+    transition:all .3s ease;
+    text-align:center;
   }
-  .stamp-title{font-family:var(--font-mono); font-weight:600; color:var(--amber); font-size:.95rem; margin-bottom:6px;}
-  .stamp-sub{font-size:.85rem; color:var(--ink-muted); line-height:1.4;}
+  .stamp:hover{transform:translateY(-4px); border-color:var(--gold); box-shadow:0 8px 25px rgba(255, 215, 0, 0.2);}
+  .stamp-title{font-family:var(--font-mono); font-weight:600; color:var(--gold); font-size:1rem; margin-bottom:6px;}
+  .stamp-sub{font-size:.88rem; color:var(--ink-muted); line-height:1.5; font-weight:500;}
 
   .education{display:flex; flex-direction:column; gap:18px;}
   .edu-item{
     display:flex; justify-content:space-between; gap:16px; flex-wrap:wrap;
-    padding:16px 0; border-top:1px solid var(--line-soft);
+    padding:18px 0; border-top:1px solid var(--line-soft);
+    transition:all .2s ease;
   }
-  .edu-main h4{font-family:var(--font-display); font-size:1.02rem; font-weight:600; margin-bottom:3px;}
+  .edu-item:hover{border-top-color:var(--primary);}
+  .edu-main h4{font-family:var(--font-display); font-size:1.02rem; font-weight:600; margin-bottom:3px; color:var(--accent);}
   .edu-main p{font-size:.88rem; color:var(--ink-muted);}
   .edu-meta{font-family:var(--font-mono); font-size:.8rem; color:var(--ink-faint); text-align:right; white-space:nowrap;}
-  .edu-meta .gpa{color:var(--copper-bright); display:block; margin-top:2px;}
+  .edu-meta .gpa{color:var(--gold); display:block; margin-top:2px; font-weight:600;}
 
-  /* ---------- Contact ---------- */
+  /* Contact */
   .contact-card{
     display:flex; flex-direction:column; gap:14px; background:var(--bg-panel); border:1px solid var(--line);
-    border-radius:8px; padding:22px; max-width:440px; margin-top:22px;
+    border-radius:12px; padding:28px; max-width:440px; margin-top:22px;
+    box-shadow:0 4px 20px rgba(0,0,0,0.2);
+    transition:all .3s ease;
   }
-  .contact-row{display:flex; align-items:center; gap:12px; font-family:var(--font-mono); font-size:.92rem; text-decoration:none; color:var(--ink);}
-  .contact-row svg{width:18px; height:18px; color:var(--green); flex:none;}
-  .contact-row:hover{color:var(--green);}
+  .contact-card:hover{box-shadow:0 8px 30px rgba(0,0,0,0.3); border-color:var(--primary);}
+  .contact-row{display:flex; align-items:center; gap:12px; font-family:var(--font-mono); font-size:.92rem; text-decoration:none; color:var(--ink); transition:all .2s ease; padding:8px 12px; border-radius:6px;}
+  .contact-row:hover{color:var(--accent); background:rgba(0, 212, 255, 0.08);}
+  .contact-row svg{width:18px; height:18px; color:var(--accent); flex:none;}
 
   .site-footer{
     text-align:center; padding:48px 24px 60px; font-family:var(--font-mono); font-size:.8rem; color:var(--ink-faint);
+    border-top:1px solid var(--line);
   }
 
   @media (max-width:640px){
@@ -252,6 +279,36 @@
     .hero{padding:80px 18px 56px;}
     .board{padding:0 18px;}
     .block{margin-left:2px;}
+    .gauges{grid-template-columns:1fr 1fr;}
+    .gauge-value{font-size:1.5rem;}
+  }
+  
+  /* Animations */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .block {
+    animation: fadeInUp 0.6s ease-out forwards;
+    opacity: 0;
+  }
+  
+  .block:nth-child(1) { animation-delay: 0.1s; }
+  .block:nth-child(2) { animation-delay: 0.2s; }
+  .block:nth-child(3) { animation-delay: 0.3s; }
+  .block:nth-child(4) { animation-delay: 0.4s; }
+  .block:nth-child(5) { animation-delay: 0.5s; }
+  .block:nth-child(6) { animation-delay: 0.6s; }
+  
+  @media (prefers-reduced-motion: reduce) {
+    .block { animation: none; opacity: 1; }
   }
 </style>
 </head>
@@ -298,8 +355,8 @@
     </svg>
 
     <div class="hero-inner">
-      <p class="eyebrow">Production &amp; Quality Management</p>
-      <h1>Md Irman<br>Ansari</h1>
+      <p class="eyebrow">Production & Quality Management</p>
+      <h1>Md Irman Ansari</h1>
       <p class="hero-tagline">Ten years keeping electronics production lines ISO-certified, Six-Sigma-tight, and running clean.</p>
 
       <div class="status-pill"><span class="dot" aria-hidden="true"></span> Available for opportunities</div>
@@ -348,7 +405,6 @@
       <p class="tag">U2 — Impact metrics</p>
       <h2>What the numbers say</h2>
       <div class="gauges">
-
         <div class="gauge" data-pct="20">
           <svg class="gauge-svg" viewBox="0 0 200 140" aria-hidden="true">
             <path class="gauge-track"></path>
@@ -359,7 +415,6 @@
           <div class="gauge-value">20%</div>
           <div class="gauge-label">Fewer assembly errors</div>
         </div>
-
         <div class="gauge" data-pct="15">
           <svg class="gauge-svg" viewBox="0 0 200 140" aria-hidden="true">
             <path class="gauge-track"></path>
@@ -370,7 +425,6 @@
           <div class="gauge-value">15%</div>
           <div class="gauge-label">Less equipment downtime</div>
         </div>
-
         <div class="gauge" data-pct="99">
           <svg class="gauge-svg" viewBox="0 0 200 140" aria-hidden="true">
             <path class="gauge-track"></path>
@@ -381,7 +435,6 @@
           <div class="gauge-value">99%</div>
           <div class="gauge-label">STQC/SQC compliance</div>
         </div>
-
         <div class="gauge" data-pct="30">
           <svg class="gauge-svg" viewBox="0 0 200 140" aria-hidden="true">
             <path class="gauge-track"></path>
@@ -392,7 +445,6 @@
           <div class="gauge-value">30%</div>
           <div class="gauge-label">Faster issue response</div>
         </div>
-
       </div>
     </section>
 
@@ -403,7 +455,7 @@
         <div class="skill-group">
           <h3>Operational excellence</h3>
           <ul class="chips">
-            <li>Lean Six Sigma &amp; Kaizen</li>
+            <li>Lean Six Sigma & Kaizen</li>
             <li>5S Implementation</li>
             <li>Root Cause Analysis (RCA)</li>
             <li>Process Optimization</li>
@@ -411,27 +463,27 @@
           </ul>
         </div>
         <div class="skill-group">
-          <h3>Quality assurance &amp; compliance</h3>
+          <h3>Quality assurance & compliance</h3>
           <ul class="chips">
             <li>STQC/SQC Standards</li>
             <li>ISO / IEC Compliance</li>
-            <li>QC &amp; Inspection</li>
-            <li>Defect Detection &amp; Reduction</li>
+            <li>QC & Inspection</li>
+            <li>Defect Detection & Reduction</li>
             <li>SOP Development</li>
           </ul>
         </div>
         <div class="skill-group">
-          <h3>Production &amp; engineering</h3>
+          <h3>Production & engineering</h3>
           <ul class="chips">
             <li>Electronics Manufacturing (EVM)</li>
-            <li>Inventory &amp; Workflow Management</li>
+            <li>Inventory & Workflow Management</li>
             <li>Preventive Maintenance</li>
             <li>Technical Documentation</li>
             <li>Engineering Management</li>
           </ul>
         </div>
         <div class="skill-group">
-          <h3>Leadership &amp; soft skills</h3>
+          <h3>Leadership & soft skills</h3>
           <ul class="chips">
             <li>Cross-Functional Collaboration</li>
             <li>Team Leadership (20+)</li>
@@ -446,10 +498,9 @@
       <p class="tag">U4 — Career log</p>
       <h2>Ten years on the floor</h2>
       <ol class="timeline">
-
         <li class="job">
           <span class="job-dates">Jul 2024 — Present</span>
-          <h3>Production &amp; Support Executive</h3>
+          <h3>Production & Support Executive</h3>
           <p class="job-company">Vinayaka Enterprises</p>
           <ul>
             <li>Supervised daily shop-floor operations and production teams, enforcing SOPs, quality standards, and safety protocols.</li>
@@ -459,7 +510,6 @@
             <li>Coordinated engineering, logistics, and maintenance teams to clear cross-functional production bottlenecks.</li>
           </ul>
         </li>
-
         <li class="job">
           <span class="job-dates">Nov 2018 — Jun 2024</span>
           <h3>Electronics Corporation of India Limited</h3>
@@ -472,7 +522,7 @@
                 <li>Authored SOPs and technical documentation that cut assembly errors by 20%.</li>
                 <li>Directed a cross-functional team of 20, cutting technical issue response time by 30% through targeted training.</li>
                 <li>Rolled out preventive maintenance strategies that cut equipment downtime by 15%.</li>
-                <li>Partnered with R&amp;D and Procurement to validate specs and cut material waste by 20% via Lean methods.</li>
+                <li>Partnered with R&D and Procurement to validate specs and cut material waste by 20% via Lean methods.</li>
               </ul>
             </div>
             <div class="role">
@@ -485,7 +535,6 @@
             </div>
           </div>
         </li>
-
         <li class="job">
           <span class="job-dates">Apr 2015 — Oct 2018</span>
           <h3>Site Engineer</h3>
@@ -495,34 +544,31 @@
             <li>Coordinated subcontractors and suppliers to keep timelines and material delivery on track.</li>
           </ul>
         </li>
-
       </ol>
     </section>
 
     <section class="block" id="credentials">
       <p class="tag">U5 — Credentials</p>
-      <h2>Certifications &amp; education</h2>
-
+      <h2>Certifications & education</h2>
       <div class="stamps">
         <div class="stamp">
           <div class="stamp-title">Six Sigma Certified</div>
-          <div class="stamp-sub">Process Improvement &amp; Statistical Analysis</div>
+          <div class="stamp-sub">Process Improvement & Statistical Analysis</div>
         </div>
         <div class="stamp">
           <div class="stamp-title">Lean Six Sigma Certified</div>
-          <div class="stamp-sub">Waste Reduction &amp; Workflow Optimization</div>
+          <div class="stamp-sub">Waste Reduction & Workflow Optimization</div>
         </div>
         <div class="stamp">
           <div class="stamp-title">Executive Diploma</div>
-          <div class="stamp-sub">Engineering Management — Project &amp; Operational Leadership</div>
+          <div class="stamp-sub">Engineering Management — Project & Operational Leadership</div>
         </div>
       </div>
-
       <div class="education">
         <div class="edu-item">
           <div class="edu-main">
             <h4>Aryabhatta Knowledge University, Patna</h4>
-            <p>B.Tech, Electrical &amp; Electronics Engineering</p>
+            <p>B.Tech, Electrical & Electronics Engineering</p>
           </div>
           <div class="edu-meta">Aug 2010 — Aug 2014<span class="gpa">GPA 73.55%</span></div>
         </div>
@@ -540,7 +586,6 @@
       <p class="tag">J1 — Contact</p>
       <h2>Let's talk</h2>
       <p class="prose">Open to production, quality, and operations leadership roles in electronics manufacturing — happy to talk shop-floor strategy, ISO audits, or Six Sigma rollouts.</p>
-
       <div class="contact-card">
         <a class="contact-row" href="mailto:irman9900@gmail.com">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M4 7l8 6 8-6"/></svg>
@@ -556,20 +601,16 @@
         </span>
       </div>
     </section>
-
   </div>
 
   <footer class="site-footer">
-    <p>Md Irman Ansari — Production &amp; Quality Manager</p>
+    <p>Md Irman Ansari — Production & Quality Manager | © 2026</p>
   </footer>
 </main>
 
 <script>
 (function(){
   var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-  // Build the shared gauge arc path (semicircle) using plain trig,
-  // avoiding any SVG arc-flag ambiguity.
   function polarPoint(cx, cy, r, deg){
     var rad = (deg * Math.PI) / 180;
     return { x: cx + r * Math.cos(rad), y: cy - r * Math.sin(rad) };
@@ -584,11 +625,9 @@
     }
     return d.trim();
   }
-
   var ARC_D = buildArcPath(100, 116, 84);
   var tracks = document.querySelectorAll('.gauge-track, .gauge-fill');
   for (var t = 0; t < tracks.length; t++){ tracks[t].setAttribute('d', ARC_D); }
-
   var gauges = document.querySelectorAll('.gauge');
   gauges.forEach(function(g){
     var pct = parseFloat(g.getAttribute('data-pct'));
@@ -598,7 +637,6 @@
     fill.style.strokeDasharray = len;
     var targetOffset = len * (1 - pct / 100);
     var targetRotation = pct * 1.8;
-
     if (reduceMotion){
       fill.style.transition = 'none';
       needle.style.transition = 'none';
@@ -606,10 +644,8 @@
       needle.style.transform = 'rotate(' + targetRotation + 'deg)';
       return;
     }
-
     fill.style.strokeDashoffset = len;
     needle.style.transform = 'rotate(0deg)';
-
     var io = new IntersectionObserver(function(entries){
       entries.forEach(function(entry){
         if (entry.isIntersecting){
@@ -621,8 +657,6 @@
     }, { threshold: 0.4 });
     io.observe(g);
   });
-
-  // Hero trace draw-in
   var traceLines = document.querySelectorAll('.trace-line');
   traceLines.forEach(function(line, i){
     var len = line.getTotalLength();
@@ -639,8 +673,6 @@
       });
     }
   });
-
-  // Mini sticky bar reveal
   var heroEl = document.querySelector('.hero');
   var miniBar = document.getElementById('miniBar');
   if (heroEl && miniBar){
